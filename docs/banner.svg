@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="t d">
+  <title id="t">vision-live</title>
+  <desc id="d">Percepción visual en tiempo real, 100% local: cara, ojos, manos, postura y objetos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f0d"/><stop offset="0.55" stop-color="#0d1a16"/><stop offset="1" stop-color="#0f241c"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00ffb2"/><stop offset="1" stop-color="#00d4ff"/></linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cdfff0"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#00ffb2" stop-opacity="0.20"/><stop offset="1" stop-color="#00ffb2" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="340" rx="26" fill="url(#bg)"/>
+  <ellipse cx="930" cy="170" rx="330" ry="200" fill="url(#glow)"/>
+
+  <!-- malla facial esquemática con puntos de landmark -->
+  <g transform="translate(820,80)" opacity="0.9">
+    <ellipse cx="80" cy="90" rx="72" ry="92" fill="none" stroke="url(#accent)" stroke-width="1.6" opacity="0.55"/>
+    <path d="M20,70 Q80,40 140,70" fill="none" stroke="url(#accent)" stroke-width="1.4" opacity="0.5"/>
+    <path d="M25,150 Q80,175 135,150" fill="none" stroke="url(#accent)" stroke-width="1.4" opacity="0.5"/>
+    <circle cx="50" cy="80" r="3.5" fill="url(#accent)"/><circle cx="110" cy="80" r="3.5" fill="url(#accent)"/>
+    <circle cx="50" cy="80" r="12" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="110" cy="80" r="12" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="80" cy="112" r="2.5" fill="url(#accent)" opacity="0.8"/>
+    <circle cx="80" cy="150" r="2.5" fill="url(#accent)" opacity="0.7"/>
+    <circle cx="55" cy="150" r="2.5" fill="url(#accent)" opacity="0.7"/>
+    <circle cx="105" cy="150" r="2.5" fill="url(#accent)" opacity="0.7"/>
+    <line x1="80" y1="-4" x2="80" y2="188" stroke="url(#accent)" stroke-width="1" opacity="0.18" stroke-dasharray="3 5"/>
+  </g>
+
+  <!-- mano esquemática con puntos de landmark -->
+  <g transform="translate(1030,150) rotate(-8)" opacity="0.9">
+    <path d="M-6,60 C-10,20 -8,-8 -4,-30 M12,55 C10,10 12,-22 10,-42 M28,58 C28,15 30,-16 28,-34 M44,62 C46,25 48,0 46,-14 M58,70 C62,45 60,28 56,18"
+      fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="-4" cy="-30" r="3" fill="url(#accent)"/><circle cx="10" cy="-42" r="3" fill="url(#accent)"/>
+    <circle cx="28" cy="-34" r="3" fill="url(#accent)"/><circle cx="46" cy="-14" r="3" fill="url(#accent)"/>
+    <circle cx="56" cy="18" r="3" fill="url(#accent)"/>
+    <path d="M-6,60 Q26,86 58,70" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+  </g>
+
+  <!-- esquinas de "cuadro de detección" tipo HUD -->
+  <g stroke="url(#accent)" stroke-width="2.5" fill="none" opacity="0.5">
+    <path d="M60,40 L60,64 M60,40 L84,40"/>
+    <path d="M1140,40 L1140,64 M1140,40 L1116,40"/>
+    <path d="M60,300 L60,276 M60,300 L84,300"/>
+    <path d="M1140,300 L1140,276 M1140,300 L1116,300"/>
+  </g>
+
+  <text x="62" y="150" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2" fill="url(#title)">vision-live</text>
+  <text x="66" y="196" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="500" fill="#bdeee0">Cara, ojos, manos, postura y objetos — en tiempo real, 100% en tu PC.</text>
+
+  <rect x="64" y="238" width="152" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.22"/><text x="140.0" y="260" text-anchor="middle" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#e8fff6">0 % nube</text>
+  <rect x="228" y="238" width="130" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.22"/><text x="293.0" y="260" text-anchor="middle" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#e8fff6">CUDA</text>
+  <rect x="370" y="238" width="130" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.22"/><text x="435.0" y="260" text-anchor="middle" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#e8fff6">Python 3.12</text>
+</svg>

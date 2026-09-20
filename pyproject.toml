@@ -1,0 +1,13 @@
+[project]
+name = "vision-live"
+version = "1.0.0"
+description = "Reconocimiento en tiempo real de cara, ojos, gestos y entorno. 100% local."
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mediapipe==0.10.21",
+    "opencv-python>=4.10",
+    "numpy>=2.0,<2.3",
+    "ultralytics>=8.3",
+    "onnxruntime-gpu>=1.18",
+    "insightface>=0.7",
+]

@@ -1,0 +1,43 @@
+# Escenas: qué pasa cuando haces el gesto.
+#
+#   disparador = "palmada"        → juntas las dos manos de golpe
+#   disparador = "victoria"       → cualquier gesto de la app, sostenido
+#                                   ("puño", "palma abierta", "pulgar arriba",
+#                                    "OK", "cuernos", "señalando", "pulgar abajo"…)
+#   pasos                         → se ejecutan en orden; `espera` son segundos
+#                                   antes del siguiente
+#
+# Para que Spotify arranque con UNA canción concreta: en Spotify, clic derecho
+# sobre la canción → Compartir → Copiar enlace, y cambia la línea de abajo por
+#   cmd = "xdg-open spotify:track:EL_ID_QUE_TE_HA_COPIADO"
+
+[stark]
+nombre = "Modo Stark"
+disparador = "palmada"
+enfriamiento = 12.0
+pasos = [
+  { cmd = "notify-send -u critical 'MODO STARK' 'Sistemas en línea, señor'", shell = true },
+  { cmd = "espeak-ng -v es -s 150 'Bienvenido de vuelta, señor'", shell = true },
+  { cmd = "spotify-launcher", espera = 6.0 },
+  { cmd = "xdg-open 'spotify:search:AC%2FDC%20Back%20In%20Black'", shell = true, espera = 1.5 },
+  { cmd = "kitty --title CLAUDE-STARK claude", espera = 1.0 },
+  { cmd = "firefox --new-window https://github.com", espera = 0.0 },
+]
+
+[foco]
+nombre = "Modo foco"
+disparador = "puño"
+sostener = 1.5
+pasos = [
+  { cmd = "notify-send 'MODO FOCO' 'Silencio y a trabajar'", shell = true },
+  { cmd = "playerctl pause", shell = true },
+]
+
+[musica]
+nombre = "Play / pausa"
+disparador = "palma abierta"
+sostener = 1.0
+enfriamiento = 3.0
+pasos = [
+  { cmd = "playerctl play-pause", shell = true },
+]

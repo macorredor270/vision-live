@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Lanzador: ./run  |  ./run --source 192.168.1.40  |  ./run --pose
+cd "$(dirname "$0")"
+exec ./.venv/bin/python -m vision.app "$@"

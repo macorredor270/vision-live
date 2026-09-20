@@ -1,0 +1,15 @@
+.venv/
+data/capturas/
+data/faces/*.npy
+__pycache__/
+
+# Los pesos que hacen falta para arrancar sí se versionan (unos 34 MB, ver
+# README): solo se ignoran los tamaños de YOLO más grandes que se descargan
+# solos al pedirlos con --yolo.
+*.pt
+!models/yolo11n.pt
+models/*.task
+!models/face_landmarker.task
+!models/gesture_recognizer.task
+!models/hand_landmarker.task
+!models/pose_landmarker_full.task
