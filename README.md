@@ -280,3 +280,8 @@ crear el detector facial.
 `onnxruntime-gpu` corre en CPU porque el paquete espera CUDA 12 y aquí hay
 CUDA 13 (la que usa torch). No merece la pena romper torch por ello: el
 reconocimiento de identidad no necesita GPU tal como está montado.
+
+## Licencia
+
+[AGPL-3.0](LICENSE) © 2026 macorredor270. Es la licencia de [Ultralytics YOLO](https://github.com/ultralytics/ultralytics), del que depende la detección de objetos.
+Los modelos preentrenados de [InsightFace](https://github.com/deepinsight/insightface) que descarga el reconocimiento de identidad son solo para uso no comercial.
